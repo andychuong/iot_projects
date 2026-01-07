@@ -16,14 +16,16 @@ A WiFi-enabled temperature and humidity monitor using the Adafruit ESP32 Feather
 | Part | Description |
 |------|-------------|
 | Adafruit ESP32 Feather V2| Main microcontroller |
-| DHT11 (3-pin breakout).  | Temperature & humidity sensor |
+| DHT11 (3-pin breakout)  | Temperature & humidity sensor |
+| 5V Step-up| Boosts 3V to 5V |
 
 #### Wiring
 
-| DHT11 Pin | ESP32 Feather V2 |
-|-----------|------------------|
-| VCC (+)   | 3V               |
-| DATA (S)  | GPIO 14          |
-| GND (-)   | GND              |
+| Connection | From           | To             |
+|------------|----------------|----------------|
+| Power In   | ESP32 3V       | Step-up VIN    |
+| Power Out  | 5V Step-up     | DHT11 VCC (+)  |
+| Data       | DHT11 DATA (S) | ESP32 GPIO 14  |
+| Ground     | ESP32 GND      | DHT11 GND (-)  |
 
 > Note: 3-pin breakout boards have a built-in pull-up resistor. If using a raw DHT11, add a 10kΩ resistor between DATA and VCC.
