@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+*.o
+*.elf
+*.hex
+*.bin
+
+# Arduino
+*.eep
+*.lst
+*.sym
+*.lss
+*.map
