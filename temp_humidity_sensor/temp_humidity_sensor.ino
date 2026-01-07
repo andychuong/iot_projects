@@ -1,3 +1,4 @@
+#include "arduino_secrets.h"
 #include <WiFi.h>
 #include <WebServer.h>
 #include <ArduinoOTA.h>
@@ -9,8 +10,8 @@
 #define NEOPIXEL_PIN 0
 #define NEOPIXEL_POWER 2
 
-const char* ssid = "wifi";
-const char* password = "pw";
+const char* ssid = SECRET_WIFI_SSID;
+const char* password = SECRET_WIFI_PASS;
 
 DHT dht(DHTPIN, DHTTYPE);
 WebServer server(80);
@@ -100,7 +101,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   ArduinoOTA.setHostname("dht11-sensor");
-  ArduinoOTA.setPassword("update123");
+  ArduinoOTA.setPassword(SECRET_OTA_PASS);
   
   ArduinoOTA.onStart([]() {
     setPixel(0, 0, 255);
