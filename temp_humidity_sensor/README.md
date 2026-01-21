@@ -2,6 +2,8 @@
 
 A WiFi-enabled temperature and humidity monitor using the Adafruit ESP32 Feather V2 and DHT11 sensor.
 
+![Prototype](prototype_1.jpg)
+
 ## Features
 
 - **Web Dashboard** — Real-time temperature and humidity display with auto-refresh
